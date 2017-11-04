@@ -1,0 +1,87 @@
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+  position: fixed;
+  margin-right: 100px;
+  width: 500px;
+  height:100px;
+}
+
+.panel-body {
+
+align-self: center;
+}
+
+.panel.panel-primary {
+  width: 600px;
+  height:425px;
+}
+
+.container {
+  top: 100px;
+  left: 50px;
+  height:500px;
+}
+
+ ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+ ::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+ ::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+#facebook
+{
+  width: 250px !important;
+  background-color: rgb(59,89,152);
+
+}
+#google
+{
+  width: 250px !important;
+  background-color: rgb(221,75,57);
+}
+#history {
+  overflow-y: auto;
+}
+
+#setcolor {
+  background-color: rgb(155, 225, 255);
+}
+#index-heading
+{
+    height: 500px;
+    overflow:hidden;
+}
+#online-status {
+  position: fixed;
+  margin: 0;
+  top: 0%;
+  right: 24%;
+  width: 300px;
+  height: 575px;
+
+}
+#online-users
+{
+overflow-y: scroll;
+}
+
+#heading {
+  height: 70px;
+}
+// Class
+.invisible {
+  visibility: hidden;
+}
+
+// Usage as a mixin
+.element {
+  @include invisible;
+}

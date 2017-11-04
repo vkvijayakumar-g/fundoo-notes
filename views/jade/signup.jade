@@ -1,0 +1,43 @@
+html
+  head
+    title Fundoo-Notes
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='./css/fun.css')
+    script(src='./css/jquery.min.js')
+    script(src='./css/bootstrap.min.js ')
+    script(src='./js/validation.js')
+  style.
+    #error-container {
+    color: #FF0000;
+    }
+  body
+    br
+    br
+    br
+    center
+      .panel.panel-primary(style='max-width: 350')
+        .panel-heading(style='max-height: 50;') CREATE NEW ACCOUNT
+        #index-heading.panel-body(style='overflow:hidden')
+          br
+          form#form1
+            .input-group
+              span.input-group-addon
+                i.glyphicon.glyphicon-user
+              input#firstName.form-control(type='text', data-toggle='tooltip', data-trigger='manual', data-title='Caps lock is on', name='firstname', placeholder='First Name', required='')
+            br
+            .input-group
+              span.input-group-addon
+                i.glyphicon.glyphicon-user
+              input#LastName.form-control(type='text', data-toggle='tooltip', data-trigger='manual', data-title='Caps lock is on', name='lastname', placeholder='Last Name', required='')
+            br
+            .input-group
+              span.input-group-addon
+                i.glyphicon.glyphicon-envelope
+              input#email.form-control(type='text', data-toggle='tooltip', data-trigger='manual', data-title='Caps lock is on', name='email', placeholder='Email-ID', required='')
+            br
+            #error-container #{message}
+            br
+            div
+              button.btn.btn-info(type='button' onclick='validateMail()') Verify Email
+            
+                      

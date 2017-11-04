@@ -1,0 +1,346 @@
+body {
+    background: lightgray;
+}
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+
+.navbar-default .navbar-nav #user-profile {
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 58px;
+}
+
+.navbar-default .navbar-nav #user-profile img {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    padding: 1px;
+}
+
+#wrapper {
+    padding-top: 50px;
+    padding-left: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+@media (min-width: 992px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+}
+
+@media (min-width: 992px) {
+    #wrapper #sidebar-wrapper {
+        width: 225px;
+    }
+}
+
+#sidebar-wrapper {
+    border-right: 1px solid #e7e7e7;
+    /*display:none;*/
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 225px;
+    width: 0;
+    height: 100%;
+    margin-left: -500px;
+    overflow-y: auto;
+    background: #CBCBCB;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#sidebar-wrapper .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 225px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#sidebar-wrapper .sidebar-nav li {
+    text-indent: 0;
+    line-height: 45px;
+}
+
+#sidebar-wrapper .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #CBCBCB;
+}
+
+.sidebar-nav li:first-child a {
+    background: #92bce0 !important;
+    color: #CBCBCB !important;
+}
+
+#sidebar-wrapper .sidebar-nav li a .sidebar-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+    padding: 0 2px;
+    display: inline-block;
+    text-indent: 7px;
+    margin-right: 10px;
+    color: #CBCBCB;
+    float: left;
+}
+
+#sidebar-wrapper .sidebar-nav li a .caret {
+  position: absolute;
+  right: 23px;
+  top: auto;
+  margin-top: 20px;
+}
+
+#sidebar-wrapper .sidebar-nav li ul.panel-collapse {
+    list-style: none;
+    -moz-padding-start: 0;
+    -webkit-padding-start: 0;
+    -khtml-padding-start: 0;
+    -o-padding-start: 0;
+    padding-start: 0;
+    padding: 0;
+}
+
+#sidebar-wrapper .sidebar-nav li ul.panel-collapse li i {
+    margin-right: 10px;
+}
+
+#sidebar-wrapper .sidebar-nav li ul.panel-collapse li {
+    text-indent: 15px;
+}
+
+@media (max-width: 992px) {
+    #wrapper #sidebar-wrapper {
+        width: 45px;
+    }
+    #wrapper #sidebar-wrapper #sidebar #sidemenu li ul {
+        position: fixed;
+        left: 45px;
+        margin-top: -45px;
+        z-index: 1000;
+        width: 200px;
+        height: 0;
+    }
+}
+
+.sidebar-nav li:first-child a {
+    background: #CBCBCB!important;
+    color: #fff !important;
+}
+
+.sidebar-nav li:nth-child(2) a {
+    background: #CBCBCB!important;
+    color: #fff !important;
+}
+
+.sidebar-nav li:nth-child(3) a {
+    background: #CBCBCB !important;
+    color: #fff !important;
+}
+
+.sidebar-nav li:nth-child(4) a {
+    background: #CBCBCB !important;
+    color: #fff !important;
+}
+
+.sidebar-nav li:nth-child(5) a {
+    background: #CBCBCB !important;
+    color: #fff !important;
+}
+#search-bar
+{
+  margin-left:100px;
+  width: 500px;
+}
+#search-bar-button
+{
+  height:32px;
+}
+#sidebar
+{
+  position: fixed;
+  top:50px;
+  height:700px;
+  }
+ .footer-url
+ {
+     margin-left: 10px;
+     width:100%;
+     background-color:#FFFFFF;
+ }
+.w3-card-4
+{
+  margin-left: 10px;
+  width:100%;
+  background-color:#FFFFFF;
+}
+
+input:focus {
+    outline:none;
+
+}
+input[type="text"]
+{
+    width: 140px;
+}
+.inline
+{
+display: inline-block;
+}
+.datetime
+{
+  width:300px;
+}
+.dropdown-menu.color-palette {
+    height: 80px !important;
+
+}
+.menu
+{
+  position: fixed;
+  top:3px;
+}
+#page-content-wrapper
+{
+  margin-left: 100px;
+}
+.pin
+{
+  margin-left: 160px;
+}
+.inputs
+{
+  top:0px;
+}
+.brand
+{
+  margin-left:100px;
+}
+.card-title
+{
+font-weight:bolder
+}
+.card-text
+{
+  font-size: 1em;
+  margin: 0px;
+
+}
+.card-image
+{
+    width:50px;
+    height:100px;
+}
+#datepicker
+{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+#datetimepicker
+{
+  position:absolute;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+.userprofile
+{
+width: 250px;
+}
+#usermail
+{
+  position: fixed;
+  top:100px;
+  margin-left: 90px;
+}
+#username
+{
+  position: fixed;
+  top:60px;
+  margin-left: 90px;
+}
+#owner
+{
+  position:fixed;
+  top:15px;
+  margin-left: 60px;
+}
+#logout
+{
+  position: fixed;
+  top:160px;
+  margin-left: 100px;
+}
+#btnSubmit
+{
+  position: fixed;
+  top:400px;
+
+}
+#btncancel
+{
+  position: fixed;
+  top:400px;
+  margin-left: 150px;
+}
+#imgUploader
+{
+  position: fixed;
+  top:300px;
+  margin-left: 200px;
+
+}
+.card-data {
+    color: #800080;
+}
+.url
+{
+    border-width:3px;
+    border-top-style:outset;
+}
+.url-content
+{
+/*position:fixed;*/
+font-size: 0.7em;
+top:15px;
+margin-left: 50px;
+}
+.url-more
+{
+    top:5px;
+    margin-left:180px;
+}
+.url-image
+{
+position: fixed;
+}
+.url-link
+{
+  position:fixed;
+  margin-left:170px;
+
+}
+.timeIcon
+{
+    font-size: 0em;
+}

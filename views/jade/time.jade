@@ -1,0 +1,125 @@
+html
+  head
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    script(src='./css/jquery-3.1.1.min.js')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='./css/jquery.form.min.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='./css/jquery.timepicker.js')
+    link(rel='stylesheet', href='./css/jquery.timepicker.css')
+    script(src='./css/bootstrap-datepicker.js')
+    link(rel='stylesheet', href='./css/bootstrap-datepicker.css')
+    script(src='http://jonthornton.github.io/Datepair.js/dist/datepair.js')
+    script(src='http://jonthornton.github.io/Datepair.js/dist/jquery.datepair.js')
+    link(rel='stylesheet', href='./css/style.css')
+    script(src='./js/ui.js')
+    script(src='./js/remainders.js')
+    script(src='./js/datetime.js')
+    script(src='./js/colloborators.js')
+  body 
+    #navbar-wrapper
+      header
+        nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+          .container-fluid
+            .navbar-header
+              .inline
+                span.menu(onclick='sidebartransition()')
+                  img.img(src='./images/menu.png', height='40')
+              .inline
+                p
+                h3.brand
+                  b
+                    | Fundoo Notes
+                    b
+                p
+            #navbar-collapse.collapse.navbar-collapse.inline
+              form.navbar-form.navbar-left(role='search')
+                .input-group
+                  input#search-bar.form-control(type='text',name="search-bar",autocomplete='off', placeholder='Search')
+                  span.input-group-btn
+                    button#search-bar-button.btn.btn-default(type='submit')
+                      span.glyphicon.glyphicon-search(aria-hidden='true')
+              ul.nav.navbar-nav.navbar-right
+                li.dropdown
+                  a#user-profile.dropdown-toggle(href='#', data-toggle='dropdown')
+                    img.img-circle(src='#{profilePic}', height='50')
+                  .dropdown-menu.userprofile
+                    a#image(data-toggle="modal" data-target="#changeprofilePic")
+                      img#profilePic.img-circle(src='#{profilePic}', height='80')
+                    #username #{username}
+                    #usermail #{usermail}
+                    hr
+                    #logout
+                      a(href='/logout') Logout
+    #wrapper
+      #sidebar-wrapper
+        aside#sidebar
+          ul#sidemenu.sidebar-nav
+            li
+              .inline
+                a(href='/profile')
+                  span.sidebar-icon
+                    img.img(src='./images/notes.png', height='20')
+                  span.sidebar-title Notes
+            li
+              .inline
+                a(href='/reminders')
+                  span.sidebar-icon
+                    img.img(src='./images/remindericonsidebar.svg', height='20')
+                  span.sidebar-title Reminders
+            li
+              .inline
+                a(href='/archive')
+                  span.sidebar-icon
+                    img.img(src='./images/sidebarArchive.svg', height='20')
+                  span.sidebar-title Archive
+            li
+              .inline
+                a(href='/trash')
+                  span.sidebar-icon
+                    img.img(src='./images/sidebarTrash _new.svg', height='20')
+                  span.sidebar-title Trash
+            li
+              .inline
+                a(href='#')
+                  span.sidebar-icon
+                    img.img(src='./images/notes.png', height='20')
+                  span.sidebar-title Settings
+      main#page-content-wrapper(role='main')
+        form#form1(action='/createNote', method='post')
+          input#title(type='text', name='title', placeholder='Title...')
+          input#message(type='text', name='message', placeholder='Message...')
+          button.btn.btn-danger(type='submit') Add
+        .container-fluid
+          #pin.row.content
+            #pin-title
+            #pincard-row.row  
+          br
+          #unpin.row.content
+            #unpin-title
+            #card-row.row  
+      #changeprofilePic.modal(role='dialog')
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h4.model-title Select profile photo
+            .modal-body(style='height:400px')
+              form#frmUploader(enctype='multipart/form-data', action='/updateProfile', method='post')
+                input#imgUploader(type='file', name='imgUploader', multiple='', value='Select a photo from computer')
+                
+                input#btnSubmit.btn.btn-primary(type='submit', name='submit', value='Set as profile photo')
+                =" "
+                button#btncancel.btn.btn-default(type='button', data-dismiss='modal') Cancel
+      #updateCard.modal(role='dialog')
+        .modal-dialog
+          .modal-content
+            .modal-body
+              form#cardForm(action='/updateNote', method='post')
+                input#card-title(type='text',name="cardtitle", style='border:none;')
+                input#card-text(type='text', name="cardtext" style='border:none;')
+                button(type='submit') done
+                button(type='button', data-dismiss='modal') Cancel
